@@ -36,14 +36,15 @@ const indexSets = function () {
   })
 }
 
-const showSet = function (setData) {
-  const setId = setData.dj_set.id
+const showSet = function (data) {
+  const setId = data.dj_set.id
   return $.ajax({
     url: config.apiUrl + `/dj_sets/${setId}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
-    method: 'GET'
+    method: 'GET',
+    data: data
   })
 }
 

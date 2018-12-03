@@ -15,6 +15,7 @@ const addSetSuccess = function (data) {
     <h4>ID: ${djSet.id}</h4>
     <br />
     `)
+  $('#display-sets').removeClass('hidden')
   $('#display-sets').html(djSetHtml)
   $('#add-set-form').trigger('reset')
   $('#update-set-form').trigger('reset')
@@ -38,7 +39,7 @@ const updateSetSuccess = function (data) {
   $('#display-message').html('')
   $('#collection-empty-message').addClass('hidden')
   $('#display-message').html('Update successful!')
-  $('#display-message').css('color', 'red')
+  $('#display-message').css('color', 'green')
   $('#add-set-form').trigger('reset')
   $('#update-set-form').trigger('reset')
   $('#show-set-form').trigger('reset')
@@ -73,6 +74,7 @@ const indexSetsSuccess = function (data) {
         <h4>ID: ${djSet.id}</h4>
         <br />
         `)
+      $('#display-sets').removeClass('hidden')
       $('#display-sets').append(djSetHtml)
     })
   }
@@ -107,6 +109,7 @@ const showSetSuccess = function (data) {
     <h4>ID: ${djSet.id}</h4>
     <br />
     `)
+  $('#display-sets').removeClass('hidden')
   $('#display-sets').html(djSetHtml)
   $('#add-set-form').trigger('reset')
   $('#update-set-form').trigger('reset')
