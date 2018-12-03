@@ -38,7 +38,38 @@
         <br />
         <button id="sign-out-button" class="hidden">Sign Out</button>
       </header>
+      <form id="add-set-form" class="hidden">
+        <legend>Add A DJ Set</legend>
+        <input required name="dj_set[dj]" type="text" placeholder="DJ Name"/>
+        <input required name="dj_set[title]" type="text" placeholder="Title"/>
+        <input required name="dj_set[set_type]" type="text" placeholder="Set Type (Radio Show, Live Set, etc.)"/>
+        <input required name="dj_set[genre]" type="text" placeholder="Genre"/>
+        <input required name="dj_set[date]" type="text" placeholder="Date"/>
+        <input type="submit" />
+      </form>
+      <form id="update-set-form" class="hidden">
+        <legend>Update A Set</legend>
+        <input required name="dj_set[id]" type="text" placeholder="ID"/>
+        <input required name="dj_set[dj]" type="text" placeholder="DJ Name"/>
+        <input required name="dj_set[title]" type="text" placeholder="Title"/>
+        <input required name="dj_set[set_type]" type="text" placeholder="Set Type (Radio Show, Live Set, etc.)"/>
+        <input required name="dj_set[genre]" type="text" placeholder="Genre"/>
+        <input required name="dj_set[date]" type="text" placeholder="Date"/>
+        <input type="submit" />
+      </form>
+      <button id="index-sets-button" class="hidden">Get All Sets</button>
+      <form id="show-set-form" class="hidden">
+        <legend>Get One Set</legend>
+        <input required name="dj_set[id]" type="text" placeholder="ID" />
+        <input type="submit" />
+      </form>
+      <form id="delete-set-form" class="hidden">
+        <input required name="dj_set[id]" type="text" placeholder="ID" />
+        <input type="submit" />
+      </form>
+      <h1 id="collection-empty-message" class="hidden">Your Collection Is Empty</h1>
       <h1 id="display-message" class="hidden"></h1>
+      <h1 id="display-sets" class="hidden"></h1>
       <footer>Designed By Emmet Brault</footer>
     </body>
 </html>
