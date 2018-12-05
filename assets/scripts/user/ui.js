@@ -36,6 +36,11 @@ const signInSuccess = function (response) {
   $('#index-votes-button').removeClass('hidden')
   $('#show-vote-form').removeClass('hidden')
   $('#delete-vote-form').removeClass('hidden')
+  $('#add-comment-form').removeClass('hidden')
+  $('#update-comment-form').removeClass('hidden')
+  $('#index-comments-button').removeClass('hidden')
+  $('#show-comment-form').removeClass('hidden')
+  $('#delete-comment-form').removeClass('hidden')
   $('#add-mix-form').trigger('reset')
   $('#update-mix-form').trigger('reset')
   $('#show-mix-form').trigger('reset')
@@ -44,6 +49,10 @@ const signInSuccess = function (response) {
   $('#update-vote-form').trigger('reset')
   $('#show-vote-form').trigger('reset')
   $('#delete-vote-form').trigger('reset')
+  $('#add-comment-form').trigger('reset')
+  $('#update-comment-form').trigger('reset')
+  $('#show-comment-form').trigger('reset')
+  $('#delete-comment-form').trigger('reset')
 }
 
 const signInFailure = function () {
@@ -67,6 +76,10 @@ const changePasswordSuccess = function () {
   $('#update-vote-form').trigger('reset')
   $('#show-vote-form').trigger('reset')
   $('#delete-vote-form').trigger('reset')
+  $('#add-comment-form').trigger('reset')
+  $('#update-comment-form').trigger('reset')
+  $('#show-comment-form').trigger('reset')
+  $('#delete-comment-form').trigger('reset')
 }
 
 const changePasswordFailure = function () {
@@ -82,6 +95,10 @@ const changePasswordFailure = function () {
   $('#update-vote-form').trigger('reset')
   $('#show-vote-form').trigger('reset')
   $('#delete-vote-form').trigger('reset')
+  $('#add-comment-form').trigger('reset')
+  $('#update-comment-form').trigger('reset')
+  $('#show-comment-form').trigger('reset')
+  $('#delete-comment-form').trigger('reset')
 }
 
 const signOutSuccess = function () {
@@ -95,6 +112,7 @@ const signOutSuccess = function () {
   $('#sign-out-button').addClass('hidden')
   $('#display-mixes').addClass('hidden')
   $('#display-votes').addClass('hidden')
+  $('#display-comments').addClass('hidden')
   $('#add-mix-form').addClass('hidden')
   $('#update-mix-form').addClass('hidden')
   $('#index-mixes-button').addClass('hidden')
@@ -105,6 +123,11 @@ const signOutSuccess = function () {
   $('#index-votes-button').addClass('hidden')
   $('#show-vote-form').addClass('hidden')
   $('#delete-vote-form').addClass('hidden')
+  $('#add-comment-form').addClass('hidden')
+  $('#update-comment-form').addClass('hidden')
+  $('#index-comments-button').addClass('hidden')
+  $('#show-comment-form').addClass('hidden')
+  $('#delete-comment-form').addClass('hidden')
   $('#add-mix-form').trigger('reset')
   $('#update-mix-form').trigger('reset')
   $('#show-mix-form').trigger('reset')
@@ -113,6 +136,10 @@ const signOutSuccess = function () {
   $('#update-vote-form').trigger('reset')
   $('#show-vote-form').trigger('reset')
   $('#delete-vote-form').trigger('reset')
+  $('#add-comment-form').trigger('reset')
+  $('#update-comment-form').trigger('reset')
+  $('#show-comment-form').trigger('reset')
+  $('#delete-comment-form').trigger('reset')
 }
 
 const signOutFailure = function () {
@@ -128,6 +155,10 @@ const signOutFailure = function () {
   $('#update-vote-form').trigger('reset')
   $('#show-vote-form').trigger('reset')
   $('#delete-vote-form').trigger('reset')
+  $('#add-comment-form').trigger('reset')
+  $('#update-comment-form').trigger('reset')
+  $('#show-comment-form').trigger('reset')
+  $('#delete-comment-form').trigger('reset')
 }
 
 module.exports = {

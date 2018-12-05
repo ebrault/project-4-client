@@ -38,7 +38,7 @@
         <br />
         <button id="sign-out-button" class="hidden">Sign Out</button>
       </header>
-      <form id="add-set-form" class="hidden">
+      <form id="add-mix-form" class="hidden">
         <legend>Add A DJ Mix</legend>
         <input required name="mix[dj]" type="text" placeholder="DJ Name"/>
         <input required name="mix[title]" type="text" placeholder="Title"/>
@@ -92,10 +92,35 @@
         <input required name="vote[id]" type="text" placeholder="Vote ID"/>
         <input type="submit" />
       </form>
+      <form id="add-comment-form" class="hidden">
+        <legend>Add A Comment</legend>
+        <input required name="comment[comment_body]" type="text" placeholder="Comment Body" />
+        <input required name="comment[mix_id]" type="text" placeholder="Mix ID" />
+        <input type="submit" />
+      </form>
+      <form id="update-comment-form" class="hidden">
+        <legend>Update A Comment</legend>
+        <input required name="comment[id]" type="text" placeholder="Comment ID" />
+        <input required name="comment[comment_body]" type="text" placeholder="Comment Body" />
+        <input required name="comment[mix_id]" type="text" placeholder="Mix ID" />
+        <input type="submit" />
+      </form>
+      <button id="index-comments-button" class="hidden">Get All Comments</button>
+      <form id="show-comment-form" class="hidden">
+        <legend>Get One Comment</legend>
+        <input required name=comment[id] type="text" placeholder="Comment ID" />
+        <input type="submit" />
+      </form>
+      <form id="delete-comment-form" class="hidden">
+        <legend>Delete A Comment</legend>
+        <input required name="comment[id]" type="text" placeholder="Comment ID" />
+        <input type="submit" />
+      </form>
       <h1 id="collection-empty-message" class="hidden">Your Collection Is Empty</h1>
       <h1 id="display-message" class="hidden"></h1>
       <h1 id="display-mixes" class="hidden"></h1>
       <h1 id="display-votes" class="hidden"></h1>
+      <h1 id="display-comments" class="hidden"></h1>
       <footer>Designed By Emmet Brault</footer>
     </body>
 </html>

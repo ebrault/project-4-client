@@ -9,6 +9,7 @@
 const userEvents = require('./user/events.js')
 const mixEvents = require('./mixes/events.js')
 const voteEvents = require('./votes/events.js')
+const commentEvents = require('./comments/events.js')
 
 $(() => {
   $('#sign-up-form').on('submit', userEvents.onSignUp)
@@ -23,6 +24,11 @@ $(() => {
   $('#add-vote-form').on('submit', voteEvents.onAddVote)
   $('#update-vote-form').on('submit', voteEvents.onUpdateVote)
   $('#index-votes-button').on('click', voteEvents.onIndexVotes)
-  $('#show-vote-form').on('click', voteEvents.onShowVote)
+  $('#show-vote-form').on('submit', voteEvents.onShowVote)
   $('#delete-vote-form').on('submit', voteEvents.onDeleteVote)
+  $('#add-comment-form').on('submit', commentEvents.onAddComment)
+  $('#update-comment-form').on('submit', commentEvents.onUpdateComment)
+  $('#index-comments-button').on('click', commentEvents.onIndexComments)
+  $('#show-comment-form').on('submit', commentEvents.onShowComment)
+  $('#delete-comment-form').on('submit', commentEvents.onDeleteComment)
 })
