@@ -3,9 +3,9 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
-const addSet = function (data) {
+const addMix = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/dj_sets',
+    url: config.apiUrl + '/mixes',
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
@@ -14,10 +14,10 @@ const addSet = function (data) {
   })
 }
 
-const updateSet = function (data) {
-  const setId = data.dj_set.id
+const updateMix = function (data) {
+  const mixId = data.mix.id
   return $.ajax({
-    url: config.apiUrl + `/dj_sets/${setId}`,
+    url: config.apiUrl + `/mixes/${mixId}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
@@ -26,9 +26,9 @@ const updateSet = function (data) {
   })
 }
 
-const indexSets = function () {
+const indexMixes = function () {
   return $.ajax({
-    url: config.apiUrl + '/dj_sets',
+    url: config.apiUrl + '/mixes',
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
@@ -36,10 +36,10 @@ const indexSets = function () {
   })
 }
 
-const showSet = function (data) {
-  const setId = data.dj_set.id
+const showMix = function (data) {
+  const mixId = data.mix.id
   return $.ajax({
-    url: config.apiUrl + `/dj_sets/${setId}`,
+    url: config.apiUrl + `/mixes/${mixId}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
@@ -48,10 +48,10 @@ const showSet = function (data) {
   })
 }
 
-const deleteSet = function (data) {
-  const setId = data.dj_set.id
+const deleteMix = function (data) {
+  const mixId = data.mix.id
   return $.ajax({
-    url: config.apiUrl + `/dj_sets/${setId}`,
+    url: config.apiUrl + `/mixes/${mixId}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
@@ -61,9 +61,9 @@ const deleteSet = function (data) {
 }
 
 module.exports = {
-  addSet,
-  updateSet,
-  indexSets,
-  showSet,
-  deleteSet
+  addMix,
+  updateMix,
+  indexMixes,
+  showMix,
+  deleteMix
 }

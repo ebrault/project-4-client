@@ -39,38 +39,63 @@
         <button id="sign-out-button" class="hidden">Sign Out</button>
       </header>
       <form id="add-set-form" class="hidden">
-        <legend>Add A DJ Set</legend>
-        <input required name="dj_set[dj]" type="text" placeholder="DJ Name"/>
-        <input required name="dj_set[title]" type="text" placeholder="Title"/>
-        <input required name="dj_set[set_type]" type="text" placeholder="Set Type (Radio Show, Live Set, etc.)"/>
-        <input required name="dj_set[genre]" type="text" placeholder="Genre"/>
-        <input required name="dj_set[date]" type="text" placeholder="Date"/>
+        <legend>Add A DJ Mix</legend>
+        <input required name="mix[dj]" type="text" placeholder="DJ Name"/>
+        <input required name="mix[title]" type="text" placeholder="Title"/>
+        <input required name="mix[mix_type]" type="text" placeholder="Mix Type (Radio Show, Live Set, etc.)"/>
+        <input required name="mix[genre]" type="text" placeholder="Genre"/>
+        <input required name="mix[date]" type="text" placeholder="Date"/>
         <input type="submit" />
       </form>
-      <form id="update-set-form" class="hidden">
-        <legend>Update A Set</legend>
-        <input required name="dj_set[id]" type="text" placeholder="ID"/>
-        <input required name="dj_set[dj]" type="text" placeholder="DJ Name"/>
-        <input required name="dj_set[title]" type="text" placeholder="Title"/>
-        <input required name="dj_set[set_type]" type="text" placeholder="Set Type (Radio Show, Live Set, etc.)"/>
-        <input required name="dj_set[genre]" type="text" placeholder="Genre"/>
-        <input required name="dj_set[date]" type="text" placeholder="Date"/>
+      <form id="update-mix-form" class="hidden">
+        <legend>Update A Mix</legend>
+        <input required name="mix[id]" type="text" placeholder="ID"/>
+        <input required name="mix[dj]" type="text" placeholder="DJ Name"/>
+        <input required name="mix[title]" type="text" placeholder="Title"/>
+        <input required name="mix[mix_type]" type="text" placeholder="Mix Type (Radio Show, Live Set, etc.)"/>
+        <input required name="mix[genre]" type="text" placeholder="Genre"/>
+        <input required name="mix[date]" type="text" placeholder="Date"/>
         <input type="submit" />
       </form>
-      <button id="index-sets-button" class="hidden">Get All Sets</button>
+      <button id="index-mixes-button" class="hidden">Get All Mixes</button>
       <form id="show-set-form" class="hidden">
-        <legend>Get One Set</legend>
-        <input required name="dj_set[id]" type="text" placeholder="ID" />
+        <legend>Get One Mix</legend>
+        <input required name="mix[id]" type="text" placeholder="ID" />
         <input type="submit" />
       </form>
-      <form id="delete-set-form" class="hidden">
-        <legend>Delete A Set</legend>
-        <input required name="dj_set[id]" type="text" placeholder="ID" />
+      <form id="delete-mix-form" class="hidden">
+        <legend>Delete A Mix</legend>
+        <input required name="mix[id]" type="text" placeholder="ID" />
+        <input type="submit" />
+      </form>
+      <form id="add-vote-form" class="hidden">
+        <legend>Add A Vote</legend>
+        <input required name="vote[vote_count]" type="text" placeholder="Vote Count" />
+        <input required name="vote[mix_id]" type="text" placeholder="Mix ID" />
+        <input type="submit" />
+      </form>
+      <form id="update-vote-form" class="hidden">
+        <legend>Update Vote Count</legend>
+        <input required name="vote[id]" type="text" placeholder="Vote ID" />
+        <input required name="vote[vote_count]" type="text" placeholder="Vote Count" />
+        <input required name="vote[mix_id]" type="text" placeholder="Mix ID" />
+        <input type="submit" />
+      </form>
+      <button id="index-votes-button" class="hidden">Get All Votes</button>
+      <form id="show-vote-form" class="hidden">
+        <legend>Get One Vote</legend>
+        <input required name="vote[id]" type="text" placeholder="Vote ID" />
+        <input type="submit" />
+      </form>
+      <form id="delete-vote-form" class="hidden">
+        <legend>Delete A Vote</legend>
+        <input required name="vote[id]" type="text" placeholder="Vote ID"/>
         <input type="submit" />
       </form>
       <h1 id="collection-empty-message" class="hidden">Your Collection Is Empty</h1>
       <h1 id="display-message" class="hidden"></h1>
-      <h1 id="display-sets" class="hidden"></h1>
+      <h1 id="display-mixes" class="hidden"></h1>
+      <h1 id="display-votes" class="hidden"></h1>
       <footer>Designed By Emmet Brault</footer>
     </body>
 </html>
