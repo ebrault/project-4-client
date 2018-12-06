@@ -1,6 +1,83 @@
 @import '~bootstrap/scss/bootstrap';
 
+
 .hidden {
   visibility: hidden;
   display: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+h1 {
+  color: #005580;
+}
+
+legend {
+  color: #005580;
+}
+
+input, textarea, select {
+  background-color: #fff;
+  margin: 8px 0;
+  width: 150px;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 17px;
+  padding: 5px 7px;
+  height: 28px;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  background-color: #005580;
+  color: #fff;
+  padding: 5px 7px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #19668C;
+}
+
+button {
+  background-color: #005580;
+  color: #fff;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #19668C;
+}
+
+::selection {
+  background: #dd7711;
+}
+
+::-moz-selection {
+  background: #dd7711;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.add-div {
+  margin-right: -60px;
+}
+
+.read-div {
+  margin-top: -22px;
+}
+
+footer {
+  color: #005580;
 }
