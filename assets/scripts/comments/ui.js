@@ -1,6 +1,8 @@
 'use strict'
 
 const addCommentSuccess = function (data) {
+  $('#display-mixes').html('')
+  $('#display-votes').html('')
   $('#display-comments').html('')
   $('#collection-empty-message').addClass('hidden')
   $('#display-message').html('Add successful!')

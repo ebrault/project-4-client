@@ -64,7 +64,17 @@ const indexMixesSuccess = function (data) {
   } else {
     $('#display-message').html('')
     $('#display-mixes').html('')
+    $('#display-comments').html('')
+    $('#display-votes').html('')
     data.mixes.forEach(function (mix) {
+      let voteTotal = 0
+      mix.votes.forEach(function (vote) {
+        voteTotal += vote.vote_count
+      })
+      let commentString = ''
+      mix.comments.forEach(function (comment) {
+        commentString += `<p>${comment.comment_body}</p>`
+      })
       const mixHtml = (`
         <p>DJ: ${mix.dj}</p>
         <h4>Title: ${mix.title}</h4>
@@ -72,6 +82,8 @@ const indexMixesSuccess = function (data) {
         <h4>Genre: ${mix.genre}</h4>
         <h4>Date: ${mix.date}</h4>
         <h4>ID: ${mix.id}</h4>
+        <h4>Votes: ${voteTotal}</h4>
+        <h4>Comments: ${commentString}</h4>
         <br />
         `)
       $('#display-mixes').removeClass('hidden')
@@ -99,7 +111,16 @@ const showMixSuccess = function (data) {
   $('#collection-empty-message').addClass('hidden')
   $('#display-message').html('')
   $('#display-mixes').html('')
+  $('#display-comments').html('')
   const mix = data.mix
+  let voteTotal = 0
+  mix.votes.forEach(function (vote) {
+    voteTotal += vote.vote_count
+  })
+  let commentString = ''
+  mix.comments.forEach(function (comment) {
+    commentString += `<p>${comment.comment_body}</p>`
+  })
   const mixHtml = (`
     <p>DJ: ${mix.dj}</p>
     <h4>Title: ${mix.title}</h4>
@@ -107,6 +128,8 @@ const showMixSuccess = function (data) {
     <h4>Genre: ${mix.genre}</h4>
     <h4>Date: ${mix.date}</h4>
     <h4>ID: ${mix.id}</h4>
+    <h4>Votes: ${voteTotal}</h4>
+    <h4>Comments: ${commentString}</h4>
     <br />
     `)
   $('#display-mixes').removeClass('hidden')

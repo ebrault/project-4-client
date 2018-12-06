@@ -38,43 +38,58 @@
         <br />
         <button id="sign-out-button" class="hidden">Sign Out</button>
       </header>
-      <form id="add-mix-form" class="hidden">
-        <legend>Add A DJ Mix</legend>
-        <input required name="mix[dj]" type="text" placeholder="DJ Name"/>
-        <input required name="mix[title]" type="text" placeholder="Title"/>
-        <input required name="mix[mix_type]" type="text" placeholder="Mix Type (Radio Show, Live Set, etc.)"/>
-        <input required name="mix[genre]" type="text" placeholder="Genre"/>
-        <input required name="mix[date]" type="text" placeholder="Date"/>
-        <input type="submit" />
-      </form>
-      <form id="update-mix-form" class="hidden">
-        <legend>Update A Mix</legend>
-        <input required name="mix[id]" type="text" placeholder="ID"/>
-        <input required name="mix[dj]" type="text" placeholder="DJ Name"/>
-        <input required name="mix[title]" type="text" placeholder="Title"/>
-        <input required name="mix[mix_type]" type="text" placeholder="Mix Type (Radio Show, Live Set, etc.)"/>
-        <input required name="mix[genre]" type="text" placeholder="Genre"/>
-        <input required name="mix[date]" type="text" placeholder="Date"/>
-        <input type="submit" />
-      </form>
-      <button id="index-mixes-button" class="hidden">Get All Mixes</button>
-      <form id="show-set-form" class="hidden">
-        <legend>Get One Mix</legend>
-        <input required name="mix[id]" type="text" placeholder="ID" />
-        <input type="submit" />
-      </form>
-      <form id="delete-mix-form" class="hidden">
-        <legend>Delete A Mix</legend>
-        <input required name="mix[id]" type="text" placeholder="ID" />
-        <input type="submit" />
-      </form>
-      <form id="add-vote-form" class="hidden">
-        <legend>Add A Vote</legend>
-        <input required name="vote[vote_count]" type="text" placeholder="Vote Count" />
-        <input required name="vote[mix_id]" type="text" placeholder="Mix ID" />
-        <input type="submit" />
-      </form>
-      <form id="update-vote-form" class="hidden">
+      <div class="flex-container">
+        <div class="add-div">
+          <form id="add-mix-form" class="hidden">
+            <legend>Add A DJ Mix</legend>
+            <input required name="mix[dj]" type="text" placeholder="DJ Name"/>
+            <input required name="mix[title]" type="text" placeholder="Title"/>
+            <input required name="mix[mix_type]" type="text" placeholder="Mix Type (Radio Show, Live Set, etc.)"/>
+            <input required name="mix[genre]" type="text" placeholder="Genre"/>
+            <input required name="mix[date]" type="text" placeholder="Date"/>
+            <input type="submit" />
+          </form>
+          <form id="add-vote-form" class="hidden">
+            <legend>Add A Vote</legend>
+            <input required name="vote[vote_count]" type="text" placeholder="Vote Count" />
+            <input required name="vote[mix_id]" type="text" placeholder="Mix ID" />
+            <input type="submit" />
+          </form>
+          <form id="add-comment-form" class="hidden">
+            <legend>Add A Comment</legend>
+            <input required name="comment[comment_body]" type="text" placeholder="Comment Body" />
+            <input required name="comment[mix_id]" type="text" placeholder="Mix ID" />
+            <input type="submit" />
+          </form>
+        </div>
+        <div class="update-div">
+          <form id="update-mix-form" class="hidden">
+            <legend>Update A Mix</legend>
+            <input required name="mix[id]" type="text" placeholder="ID"/>
+            <input required name="mix[dj]" type="text" placeholder="DJ Name"/>
+            <input required name="mix[title]" type="text" placeholder="Title"/>
+            <input required name="mix[mix_type]" type="text" placeholder="Mix Type (Radio Show, Live Set, etc.)"/>
+            <input required name="mix[genre]" type="text" placeholder="Genre"/>
+            <input required name="mix[date]" type="text" placeholder="Date"/>
+            <input type="submit" />
+          </form>
+        </div>
+        <div class="read-div">
+          <button id="index-mixes-button" class="hidden">Get All Mixes</button>
+          <form id="show-mix-form" class="hidden">
+            <legend>Get One Mix</legend>
+            <input required name="mix[id]" type="text" placeholder="ID" />
+            <input type="submit" />
+          </form>
+        </div>
+        <div class="delete-div">
+          <form id="delete-mix-form" class="hidden">
+            <legend>Delete A Mix</legend>
+            <input required name="mix[id]" type="text" placeholder="ID" />
+            <input type="submit" />
+          </form>
+        </div>
+      <!-- <form id="update-vote-form" class="hidden">
         <legend>Update Vote Count</legend>
         <input required name="vote[id]" type="text" placeholder="Vote ID" />
         <input required name="vote[vote_count]" type="text" placeholder="Vote Count" />
@@ -91,21 +106,15 @@
         <legend>Delete A Vote</legend>
         <input required name="vote[id]" type="text" placeholder="Vote ID"/>
         <input type="submit" />
-      </form>
-      <form id="add-comment-form" class="hidden">
-        <legend>Add A Comment</legend>
-        <input required name="comment[comment_body]" type="text" placeholder="Comment Body" />
-        <input required name="comment[mix_id]" type="text" placeholder="Mix ID" />
-        <input type="submit" />
-      </form>
-      <form id="update-comment-form" class="hidden">
+      </form> -->
+      <!-- <form id="update-comment-form" class="hidden">
         <legend>Update A Comment</legend>
         <input required name="comment[id]" type="text" placeholder="Comment ID" />
         <input required name="comment[comment_body]" type="text" placeholder="Comment Body" />
         <input required name="comment[mix_id]" type="text" placeholder="Mix ID" />
         <input type="submit" />
-      </form>
-      <button id="index-comments-button" class="hidden">Get All Comments</button>
+      </form> -->
+      <!-- <button id="index-comments-button" class="hidden">Get All Comments</button>
       <form id="show-comment-form" class="hidden">
         <legend>Get One Comment</legend>
         <input required name=comment[id] type="text" placeholder="Comment ID" />
@@ -115,7 +124,8 @@
         <legend>Delete A Comment</legend>
         <input required name="comment[id]" type="text" placeholder="Comment ID" />
         <input type="submit" />
-      </form>
+      </form> -->
+      </div>
       <h1 id="collection-empty-message" class="hidden">Your Collection Is Empty</h1>
       <h1 id="display-message" class="hidden"></h1>
       <h1 id="display-mixes" class="hidden"></h1>
