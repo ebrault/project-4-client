@@ -26,15 +26,6 @@ const signInSuccess = function (response) {
   $('#sign-in-form').addClass('hidden')
   $('#change-password-form').removeClass('hidden')
   $('#sign-out-button').removeClass('hidden')
-  $('#add-set-form').removeClass('hidden')
-  $('#update-set-form').removeClass('hidden')
-  $('#index-sets-button').removeClass('hidden')
-  $('#show-set-form').removeClass('hidden')
-  $('#delete-set-form').removeClass('hidden')
-  $('#add-set-form').trigger('reset')
-  $('#update-set-form').trigger('reset')
-  $('#show-set-form').trigger('reset')
-  $('#delete-set-form').trigger('reset')
 }
 
 const signInFailure = function () {
@@ -50,10 +41,6 @@ const changePasswordSuccess = function () {
   $('#display-message').css('color', 'green')
   $('#change-password-form').trigger('reset')
   $('#display-sets').addClass('hidden')
-  $('#add-set-form').trigger('reset')
-  $('#update-set-form').trigger('reset')
-  $('#show-set-form').trigger('reset')
-  $('#delete-set-form').trigger('reset')
 }
 
 const changePasswordFailure = function () {
@@ -61,10 +48,6 @@ const changePasswordFailure = function () {
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', 'red')
   $('#change-password-form').trigger('reset')
-  $('#add-set-form').trigger('reset')
-  $('#update-set-form').trigger('reset')
-  $('#show-set-form').trigger('reset')
-  $('#delete-set-form').trigger('reset')
 }
 
 const signOutSuccess = function () {
@@ -76,16 +59,6 @@ const signOutSuccess = function () {
   $('#sign-up-form').removeClass('hidden')
   $('#sign-in-form').removeClass('hidden')
   $('#sign-out-button').addClass('hidden')
-  $('#display-sets').addClass('hidden')
-  $('#add-set-form').addClass('hidden')
-  $('#update-set-form').addClass('hidden')
-  $('#index-sets-button').addClass('hidden')
-  $('#show-set-form').addClass('hidden')
-  $('#delete-set-form').addClass('hidden')
-  $('#add-set-form').trigger('reset')
-  $('#update-set-form').trigger('reset')
-  $('#show-set-form').trigger('reset')
-  $('#delete-set-form').trigger('reset')
 }
 
 const signOutFailure = function () {
@@ -93,10 +66,6 @@ const signOutFailure = function () {
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', 'red')
   $('#change-password-form').trigger('reset')
-  $('#add-set-form').trigger('reset')
-  $('#update-set-form').trigger('reset')
-  $('#show-set-form').trigger('reset')
-  $('#delete-set-form').trigger('reset')
 }
 
 module.exports = {
