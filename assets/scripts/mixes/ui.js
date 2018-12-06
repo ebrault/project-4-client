@@ -112,6 +112,7 @@ const showMixSuccess = function (data) {
   $('#display-message').html('')
   $('#display-mixes').html('')
   $('#display-comments').html('')
+  $('#display-votes').html('')
   const mix = data.mix
   let voteTotal = 0
   mix.votes.forEach(function (vote) {
